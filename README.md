@@ -2,7 +2,7 @@
 
 ***WhatsApp OpenAI Create with NodeJS Using Library [Baileys](https://github.com/adiwajshing/Baileys)***
 
-## BACA DULU
+## READ FIRST
 There are 2 features namely ```ChatGPT(text)``` and ```DALL-E(Text To Image).```<br>For the command, use ```/ai``` and ```/img```
 
 ## Get & Change OpenAI ApiKey
