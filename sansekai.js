@@ -76,16 +76,16 @@ module.exports = sansekai = async (client, m, chatUpdate, store) => {
             
 *(ChatGPT)*
 Cmd: ${prefix}ai 
-Tanyakan apa saja kepada AI. 
+Ask anything to AI. 
 
 *(DALL-E)*
 Cmd: ${prefix}img
-Membuat gambar dari teks`)
+Create an image from text`)
           break;
         case "ai": case "openai": 
           try {
-            if (setting.keyopenai === "ISI_APIKEY_OPENAI_DISINI") return reply("Apikey belum diisi\n\nSilahkan isi terlebih dahulu apikeynya di file key.json\n\nApikeynya bisa dibuat di website: https://beta.openai.com/account/api-keys");
-            if (!text) return reply(`Chat dengan AI.\n\nContoh:\n${prefix}${command} Apa itu resesi`);
+            if (setting.keyopenai === "ISI_APIKEY_OPENAI_DISINI") return reply("Apikey has not been filled\n\nPlease fill in the apikey first file key.json\n\nApikey can be made in website: https://beta.openai.com/account/api-keys");
+            if (!text) return reply(`Chat with AI.\n\nExample:\n${prefix}${command} What is a recession`);
             const configuration = new Configuration({
               apiKey: setting.keyopenai,
             });
@@ -95,7 +95,7 @@ Membuat gambar dari teks`)
               model: "text-davinci-003",
               prompt: text,
               temperature: 0.3,
-              max_tokens: 2000,
+              max_tokens: 4000,
               top_p: 1.0,
               frequency_penalty: 0.0,
               presence_penalty: 0.0,
@@ -108,14 +108,14 @@ Membuat gambar dari teks`)
             console.log(`${error.response.status}\n\n${error.response.data}`);
           } else {
             console.log(error);
-            m.reply("Maaf, sepertinya ada yang error :"+ error.message);
+            m.reply("Sorry, there seems to be an error :"+ error.message);
           }
         }
           break;
         case "img": case "ai-img": case "image": case "images":
           try {
-            if (setting.keyopenai === "ISI_APIKEY_OPENAI_DISINI") return reply("Apikey belum diisi\n\nSilahkan isi terlebih dahulu apikeynya di file key.json\n\nApikeynya bisa dibuat di website: https://beta.openai.com/account/api-keys");
-            if (!text) return reply(`Membuat gambar dari AI.\n\nContoh:\n${prefix}${command} Wooden house on snow mountain`);
+            if (setting.keyopenai === "ISI_APIKEY_OPENAI_DISINI") return reply("Apikey has not been filled\n\nPlease fill in the apikey first file key.json\n\nApikey can be made in website: https://beta.openai.com/account/api-keys");
+            if (!text) return reply(`Create images from AI.\n\nExample:\n${prefix}${command} Wooden house on snow mountain`);
             const configuration = new Configuration({
               apiKey: setting.keyopenai,
             });
@@ -134,7 +134,7 @@ Membuat gambar dari teks`)
             console.log(`${error.response.status}\n\n${error.response.data}`);
           } else {
             console.log(error);
-            m.reply("Maaf, sepertinya ada yang error :"+ error.message);
+            m.reply("Sorry, there seems to be an error :"+ error.message);
           }
         }
           break;
