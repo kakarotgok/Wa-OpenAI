@@ -1,6 +1,6 @@
 const sessionName = "yusril";
 const donet = "https://saweria.co/sansekai";
-const owner = ["6287878817169"];
+const owner = ["918790845737"];
 const {
   default: sansekaiConnect,
   useSingleFileAuthState,
@@ -157,7 +157,7 @@ async function startHisoka() {
   const client = sansekaiConnect({
     logger: pino({ level: "silent" }),
     printQRInTerminal: true,
-    browser: ["Wa-OpenAI - Sansekai", "Safari", "3.0"],
+    browser: ["Wa-OpenAI - Tharun", "Safari", "3.0"],
     auth: state,
   });
 
@@ -284,7 +284,7 @@ async function startHisoka() {
       }
     } else if (connection === "open") {
       console.log(color("Bot success conneted to server", "green"));
-      console.log(color("Donate for creator https://saweria.co/sansekai", "yellow"));
+      console.log(color("Donate for creator", "yellow"));
       console.log(color("Type /menu to see menu"));
       client.sendMessage(owner + "@s.whatsapp.net", { text: `Bot started!\n\njangan lupa support ya bang :)\n${donet}` });
     }
