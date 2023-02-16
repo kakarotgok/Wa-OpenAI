@@ -6,7 +6,7 @@
 There are 2 features namely ```ChatGPT(text)``` and ```DALL-E(Text To Image).```<br>For the command, use ```/ai``` and ```/img```
 
 ## Get & Change OpenAI ApiKey
-- Please make the apikey first [Disini](https://beta.openai.com/account/api-keys)
+- Please make the apikey first [Here](https://beta.openai.com/account/api-keys)
 - Replace the OpenAI ApiKey in the file [key.json](https://github.com/Sansekai/Wa-OpenAI/blob/3bd55740764bcb30084277f6be82d15b6ee25b99/key.json#L2)
 
 ## Install
