@@ -31,7 +31,7 @@ module.exports = sansekai = async (client, m, chatUpdate, store) => {
     const isCmd2 = body.startsWith(prefix);
     const command = body.replace(prefix, "").trim().split(/ +/).shift().toLowerCase();
     const args = body.trim().split(/ +/).slice(1);
-    const pushname = m.pushName || "No Name";
+    const pushname = m.pushName || "Tharun";
     const botNumber = await client.decodeJid(client.user.id);
     const itsMe = m.sender == botNumber ? true : false;
     let text = (q = args.join(" "));
